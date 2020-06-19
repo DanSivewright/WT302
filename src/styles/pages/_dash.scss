@@ -1,0 +1,58 @@
+.dash__page {
+  background-color: $white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .dash__wrapper {
+    width: 50%;
+    height: 100vh;
+    padding: 3em 3em;
+
+    h2 {
+      font-weight: bolder;
+    }
+
+    .card {
+      margin: 2em 0;
+      border-radius: 15px;
+      width: 100%;
+      min-height: 15em;
+      padding: 2em 4em;
+      box-shadow: $generic-box-shadow;
+
+      &.red {
+        background: $seconday-gradient;
+      }
+      &.blue {
+        background: $primary-gradient;
+      }
+      &.green {
+        background: $green-gradient;
+      }
+
+      .card__stats {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          font-weight: lighter;
+          margin-bottom: 3em;
+        }
+
+        h2 {
+          color: white;
+          font-weight: bolder;
+          line-height: 0;
+          font-size: 5em;
+        }
+      }
+    }
+
+    @include mq(980px) {
+      width: 100%;
+    }
+  }
+}
